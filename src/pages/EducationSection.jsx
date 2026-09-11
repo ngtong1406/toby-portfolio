@@ -3,7 +3,7 @@ import EducationCard from "../components/EducationCard";
 
 const EducationSection = () => {
     return (
-        <div className="w-full mt-30 grid grid-cols-7 gap-17">
+        <div className="section-container grid grid-cols-7 gap-17">
             <div className="w-full col-span-3">
                 <img
                     className="w-full h-auto object-cover"

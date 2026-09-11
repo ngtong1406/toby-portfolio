@@ -69,6 +69,9 @@
 }
 
 @layer components {
+    .section-container {
+        @apply w-full mt-5 mb-30;
+    }
     h1.section-heading::before {
         content: "# ";
         @apply text-white text-xl font-bold;
@@ -84,6 +87,10 @@
     }
     span.section-text-highlight {
         @apply text-white font-semibold;
+    }
+
+    .project-hyphen {
+        @apply bg-[#3C3C3C] w-full h-px border-0;
     }
 
     .nav-container {

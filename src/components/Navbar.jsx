@@ -32,7 +32,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="w-full py-10 sticky top-0 bg-primary">
+        <div className="w-full py-10 sticky top-0 bg-primary z-97">
             <nav className="w-full inline-flex justify-between align-middle">
                 <div className="w-1/3 space-y-1">
                     <div className="text-white font-bold">

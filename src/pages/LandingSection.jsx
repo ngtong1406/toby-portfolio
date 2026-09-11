@@ -21,7 +21,7 @@ const LandingSection = () => {
     }, []);
 
     return (
-        <div className="w-full mt-5 grid grid-cols-7 gap-17">
+        <div className="w-full section-container grid grid-cols-7 gap-17">
             <div className="col-span-4 flex flex-col justify-between">
                 <div>
                     <h1 className="section-heading">about-me</h1>
