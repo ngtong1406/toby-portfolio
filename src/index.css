@@ -82,6 +82,9 @@
     .section-text p {
         @apply mt-4 text-justify;
     }
+    span.section-text-highlight {
+        @apply text-white font-semibold;
+    }
 
     .nav-container {
         @apply w-full pt-20 pb-10 sticky top-0 backdrop-blur-3xl;

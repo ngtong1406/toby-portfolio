@@ -28,32 +28,29 @@ const LandingSection = () => {
                     <hr className="section-break" />
                     <div className="section-text mb-4">
                         <p>
-                            I’m a{" "}
-                            <span className="text-white font-semibold">
-                                software developer
-                            </span>{" "}
-                            recently graduated from{" "}
-                            <span className="text-white font-semibold">
+                            Hey there 👋, my name is Toby Tran. I’m a software
+                            developer recently graduated from{" "}
+                            <span className="section-text-highlight">
                                 the University of South Australia (UniSA)
                             </span>{" "}
                             with{" "}
-                            <span className="text-white font-semibold">
+                            <span className="section-text-highlight">
                                 a GPA of 6.17 / 7.00
                             </span>
                             , majoring in Software Development. Currently based
                             in{" "}
-                            <span className="text-white font-semibold">
+                            <span className="section-text-highlight">
                                 Adelaide, SA
                             </span>
                             , I am{" "}
-                            <span className="text-white font-semibold">
+                            <span className="section-text-highlight">
                                 actively looking for opportunities
                             </span>{" "}
                             to contribute to real-world projects.
                         </p>
                         <p>
                             I take great pride in building solutions that are
-                            <span className="text-white font-semibold">
+                            <span className="section-text-highlight">
                                 {" "}
                                 not only functional but are also underpinned by
                                 clean, robust architecture
@@ -64,7 +61,12 @@ const LandingSection = () => {
                             contributes to timely, high-quality deliverables.
                         </p>
                     </div>
+                    <h1 className="section-heading">social-links</h1>
                     <hr className="section-break" />
+                    <div className="section-text mb-4">
+                        Want a collaboration? You can easily find me in the
+                        following links where I'm the most active on:
+                    </div>
                     <div className="w-full flex flex-wrap gap-3">
                         <ContactLinkSmall
                             SvgIcon={AtIcon}
