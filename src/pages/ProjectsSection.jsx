@@ -5,8 +5,8 @@ import { SquareMousePointer } from "lucide-react";
 import projects from "../data/projects.json";
 
 const ProjectsSection = ({ onSelectProject }) => {
-    const handleClick = (year, projectName) => {
-        onSelectProject([year, projectName]);
+    const handleClick = (project) => {
+        onSelectProject(project);
     };
 
     return (
@@ -50,9 +50,7 @@ const ProjectsSection = ({ onSelectProject }) => {
                                     {/* Project List */}
                                     <div className="col-span-8 flex flex-col">
                                         <div
-                                            onClick={() =>
-                                                handleClick(year, project.title)
-                                            }
+                                            onClick={() => handleClick(project)}
                                             className="grid grid-cols-5 py-6 pl-4 items-center gap-6 hover:bg-border-sub-light cursor-pointer transition-colors"
                                         >
                                             <div className="col-span-3 space-y-2">

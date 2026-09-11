@@ -2,6 +2,7 @@
     "2025": [
         {
             "title": "Mission Planner",
+            "image": "https://images.interestingengineering.com/2023/04/16/image/jpeg/tCht79YHms48BYKzclvMO0uZsqWSd1WP6XKsq9RP.jpg",
             "period": "Nov. 2025",
             "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
             "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
@@ -36,6 +37,7 @@
     "2024": [
         {
             "title": "SA Expiation Dashboard",
+            "image": "https://www.police.sa.gov.au/__data/assets/image/0005/1349807/MPDC-mobile-offence-passenger-steering.jpg",
             "period": "Nov. 2024",
             "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
             "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
@@ -52,10 +54,16 @@
                     "link": "https://www.linkedin.com/in/tobytran/"
                 }
             ],
-            "other": []
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://github.com/ngtong1406/sa-expiation-dashboard"
+                }
+            ]
         },
         {
             "title": "Big Thing Finder (iOS)",
+            "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Big_Things_Postcard.jpg/500px-Big_Things_Postcard.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
             "period": "Nov. 2024",
             "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
             "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
@@ -67,7 +75,12 @@
                     "link": "https://www.linkedin.com/in/tobytran/"
                 }
             ],
-            "other": []
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://github.com/ngtong1406/big-thing-finder"
+                }
+            ]
         }
     ],
     "2017": [
