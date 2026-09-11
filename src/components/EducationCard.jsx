@@ -134,14 +134,14 @@ export default function EducationCard() {
                 return (
                     <div
                         key={entry.id}
-                        className={`w-full py-6 px-10 bg-border-sub-light border hover:border-secondary border-border-main duration-100 rounded-none ${
+                        onClick={() => toggleExpand(entry.id)}
+                        className={`w-full py-6 px-10 bg-border-sub-light border hover:border-secondary border-border-main duration-100 rounded-none hover:cursor-pointer ${
                             isOpen ? "bg-border-subbody" : "bg-border-sub-light"
                         }`}
                     >
                         <div
-                            onClick={() => toggleExpand(entry.id)}
                             className={
-                                "w-full flex items-center justify-start gap-7 hover:cursor-pointer select-none "
+                                "w-full flex items-center justify-start gap-7 select-none "
                             }
                         >
                             <img
