@@ -54,7 +54,7 @@ const LandingSection = () => {
                         <ContactLinkSmall
                             SvgIcon={AtIcon}
                             label="Email address"
-                            href="mailto:ngtong1406@gmail.com"
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=ngtong1406@gmail.com&su=Inquiry+from+Portfolio"
                         />
                         <ContactLinkSmall
                             SvgIcon={LinkedInIcon}
