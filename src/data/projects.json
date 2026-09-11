@@ -1,0 +1,148 @@
+{
+    "2025": [
+        {
+            "title": "Mission Planner",
+            "image": "https://images.interestingengineering.com/2023/04/16/image/jpeg/tCht79YHms48BYKzclvMO0uZsqWSd1WP6XKsq9RP.jpg",
+            "period": "Nov. 2025",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": [
+                "FastAPI",
+                "PyWebView",
+                "ReactJS",
+                "TailwindCSS",
+                "CesiumJS",
+                "DBScan"
+            ],
+            "contributors": [
+                {
+                    "name": "Brayden Hutchens",
+                    "role": "Team Leader",
+                    "link": "https://www.linkedin.com/in/brayden-hutchens/"
+                },
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Lead Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                },
+                {
+                    "name": "Kais Shahid",
+                    "role": "Scrum Master",
+                    "link": ""
+                }
+            ],
+            "other": []
+        }
+    ],
+    "2024": [
+        {
+            "title": "SA Expiation Dashboard",
+            "image": "https://www.police.sa.gov.au/__data/assets/image/0005/1349807/MPDC-mobile-offence-passenger-steering.jpg",
+            "period": "Nov. 2024",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": [
+                "ASP.NET Core Web API",
+                "ReactJS",
+                "Bootstrap",
+                "D3.js"
+            ],
+            "contributors": [
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Full-stack Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                }
+            ],
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://github.com/ngtong1406/sa-expiation-dashboard"
+                }
+            ]
+        },
+        {
+            "title": "Big Thing Finder (iOS)",
+            "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Big_Things_Postcard.jpg/500px-Big_Things_Postcard.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+            "period": "Nov. 2024",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": ["SwiftUI", "Persistent Storage"],
+            "contributors": [
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Full-stack Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                }
+            ],
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://github.com/ngtong1406/big-thing-finder"
+                }
+            ]
+        }
+    ],
+    "2017": [
+        {
+            "title": "Towny Title",
+            "period": "Oct. 2017",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": ["Spigot API", "Java"],
+            "contributors": [
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Minecraft Plugin Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                }
+            ],
+            "other": []
+        },
+        {
+            "title": "Better TNT Mechanics",
+            "period": "Sep. 2017",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": ["Spigot API", "Java"],
+            "contributors": [
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Minecraft Plugin Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                }
+            ],
+            "other": []
+        },
+        {
+            "title": "Secret Password",
+            "period": "Aug. 2017",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": ["Spigot API", "Java"],
+            "contributors": [
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Minecraft Plugin Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                }
+            ],
+            "other": []
+        },
+        {
+            "title": "SimpleDoubleJump",
+            "period": "Aug. 2017",
+            "the_problem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste nemo, nulla ab odit nobis quibusdam, sed totam praesentium alias, quasi repellat autem iure officiis velit dolor quia? Esse, exercitationem vitae?",
+            "project_highlights": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, nostrum cupiditate. A ea mollitia recusandae non vel laudantium modi nihil deserunt molestiae? Animi enim quisquam veritatis alias nobis error illo.",
+            "tech_stack": ["Spigot API", "Java"],
+            "contributors": [
+                {
+                    "name": "Toby Tran (me)",
+                    "role": "Minecraft Plugin Developer",
+                    "link": "https://www.linkedin.com/in/tobytran/"
+                }
+            ],
+            "other": []
+        }
+    ]
+}
