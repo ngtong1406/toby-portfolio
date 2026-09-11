@@ -28,25 +28,40 @@ const LandingSection = () => {
                     <hr className="section-break" />
                     <div className="section-text mb-4">
                         <p>
-                            I’m a <b>software developer</b> recently graduated
-                            from{" "}
-                            <b>the University of South Australia (UniSA)</b>{" "}
-                            with <b>a GPA of 6.17 / 7.00</b>, majoring in
-                            Software Development.
-                        </p>
-                        <p>
-                            Currently based in <b>Adelaide, SA</b>, I am{" "}
-                            <b>actively looking for opportunities</b> to
-                            contribute to real-world projects.
+                            I’m a{" "}
+                            <span className="text-white font-semibold">
+                                software developer
+                            </span>{" "}
+                            recently graduated from{" "}
+                            <span className="text-white font-semibold">
+                                the University of South Australia (UniSA)
+                            </span>{" "}
+                            with{" "}
+                            <span className="text-white font-semibold">
+                                a GPA of 6.17 / 7.00
+                            </span>
+                            , majoring in Software Development. Currently based
+                            in{" "}
+                            <span className="text-white font-semibold">
+                                Adelaide, SA
+                            </span>
+                            , I am{" "}
+                            <span className="text-white font-semibold">
+                                actively looking for opportunities
+                            </span>{" "}
+                            to contribute to real-world projects.
                         </p>
                         <p>
                             I take great pride in building solutions that are
-                            not only functional but are also underpinned by
-                            clean, robust architecture. My serious commitment to
-                            applying best practices through SOLID Principles and
-                            System Design ensures scalability, prevents
-                            technical debts, and contributes to timely,
-                            high-quality deliverables.
+                            <span className="text-white font-semibold">
+                                {" "}
+                                not only functional but are also underpinned by
+                                clean, robust architecture
+                            </span>
+                            . My serious commitment to applying best practices
+                            through SOLID Principles and System Design ensures
+                            scalability, prevents technical debts, and
+                            contributes to timely, high-quality deliverables.
                         </p>
                     </div>
                     <hr className="section-break" />

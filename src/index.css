@@ -18,6 +18,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Google Sans";
+    src: url("fonts/Google_Sans/GoogleSans-VariableFont_GRAD,opsz,wght.ttf")
+        format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme {
     /* override the default tailwind's mono font */
     --font-mono: "JetBrains Mono", monospace;
@@ -26,6 +35,10 @@
     /* same as above */
     --font-serif: "Playfair Display", serif;
     --font-playfair: "Playfair Display", serif;
+
+    /* for sans-srif */
+    --font-sans: "Google Sans", sans-serif;
+    --font-google: "Google Sans", sans-serif;
 
     --color-primary: #191919;
     --color-secondary: #b4b4b4;
@@ -49,7 +62,7 @@
     }
 
     body {
-        @apply bg-primary text-secondary text-[1rem] font-mono overflow-x-hidden;
+        @apply bg-primary text-secondary text-[1rem] font-sans overflow-x-hidden;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
