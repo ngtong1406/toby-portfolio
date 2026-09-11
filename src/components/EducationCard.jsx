@@ -12,6 +12,7 @@ import marryatvilleLogo from "../assets/photos/marryatville-logo.jpg";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "motion/react";
 
 export default function EducationCard() {
