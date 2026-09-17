@@ -7,20 +7,50 @@ import SkillsSection from "./pages/SkillsSection.jsx";
 import ContactSection from "./pages/ContactSection.jsx";
 import { useState } from "react";
 import ProjectDetailsModal from "./components/ProjectDetailsModal.jsx";
+// import ScrollUp from "./pages/ScrollUp.jsx";
+import { useRef } from "react";
 
 const App = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
+    const aboutRef = useRef(null);
+    const projectsRef = useRef(null);
+    const skillsRef = useRef(null);
+    const contactRef = useRef(null);
+
+    const sectionRefs = {
+        about: aboutRef,
+        projects: projectsRef,
+        skills: skillsRef,
+        contact: contactRef,
+    };
+
+    const scrollToSection = (key) => {
+        sectionRefs[key]?.current?.scrollIntoView();
+    };
+
     return (
         <>
-            <Navbar />
+            {/* <ScrollUp /> */}
+            <Navbar onNavigate={scrollToSection} sectionRefs={sectionRefs} />
             <div className="min-h-screen mx-30">
                 <main>
-                    <LandingSection />
-                    <EducationSection />
-                    <ProjectsSection onSelectProject={setSelectedProject} />
-                    <SkillsSection />
-                    <ContactSection />
+                    <section ref={aboutRef} className="section-container">
+                        <LandingSection />
+                        <EducationSection />
+                    </section>
+
+                    <section ref={projectsRef} className="section-container">
+                        <ProjectsSection onSelectProject={setSelectedProject} />
+                    </section>
+
+                    <section ref={skillsRef} className="section-container">
+                        <SkillsSection />
+                    </section>
+
+                    <section ref={contactRef}>
+                        <ContactSection />
+                    </section>
                 </main>
 
                 <Footer />

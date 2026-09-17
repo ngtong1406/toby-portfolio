@@ -72,6 +72,9 @@
     .section-container {
         @apply w-full mt-5 scroll-mt-40 mb-30;
     }
+    .section-container div#first {
+        @apply mb-30;
+    }
     h1.section-heading::before {
         content: "# ";
         @apply text-white text-xl font-bold;
@@ -99,11 +102,8 @@
     .nav-list {
         @apply flex items-center justify-around gap-8;
     }
-    .nav-list li.nav-list-item {
-        @apply hover:text-white hover:underline hover:underline-offset-4 transition-colors font-semibold;
-    }
-    li.nav-list-item > a {
-        @apply active:text-white;
+    .nav-list .nav-list-item {
+        @apply hover:text-white hover:cursor-pointer transition-colors font-semibold;
     }
 
     .edu-card-link {

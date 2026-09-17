@@ -4,7 +4,7 @@ import ExternalLinkButton from "./ExternalLinkButton";
 
 import resume from "/files/Resume_Toby_Tran_Software_Developer.pdf";
 
-const Navbar = () => {
+const Navbar = ({ onNavigate, sectionRefs }) => {
     const initialWidth = window.innerWidth;
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
@@ -21,7 +21,6 @@ const Navbar = () => {
 
     const [activeItem, setActiveItem] = useState();
     useEffect(() => {
-        const sections = document.querySelectorAll("section[id]");
         const options = {
             root: null,
             rootMargin: "-50% 0px -50% 0px",
@@ -31,15 +30,20 @@ const Navbar = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    setActiveItem(entry.target.id);
+                    const matchedKey = Object.keys(sectionRefs).find(
+                        (key) => sectionRefs[key].current === entry.target,
+                    );
+                    if (matchedKey) setActiveItem(matchedKey);
                 }
             });
         }, options);
 
-        sections.forEach((section) => observer.observe(section));
+        Object.values(sectionRefs).forEach((ref) => {
+            if (ref.current) observer.observe(ref.current);
+        });
 
         return () => observer.disconnect();
-    }, []);
+    }, [sectionRefs]);
 
     const [time, setTime] = useState("");
     useEffect(() => {
@@ -65,6 +69,13 @@ const Navbar = () => {
 
         return () => clearInterval(timerId);
     }, []);
+
+    const navItems = [
+        { label: "ABOUT", key: "about" },
+        { label: "PROJECTS", key: "projects" },
+        { label: "SKILLS", key: "skills" },
+        { label: "CONTACT", key: "contact" },
+    ];
 
     return (
         <div
@@ -100,33 +111,20 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ul className="w-1/3 nav-list">
-                    <li
-                        className={
-                            "nav-list-item " +
-                            (activeItem === "about" &&
-                                "text-white underline underline-offset-4")
-                        }
-                    >
-                        <a href="#about">ABOUT</a>
-                    </li>
-                    <li
-                        className={
-                            "nav-list-item " +
-                            (activeItem === "projects" &&
-                                "text-white underline underline-offset-4")
-                        }
-                    >
-                        <a href="#projects">PROJECTS</a>
-                    </li>
-                    <li
-                        className={
-                            "nav-list-item " +
-                            (activeItem === "skills" &&
-                                "text-white underline underline-offset-4")
-                        }
-                    >
-                        <a href="#skills">SKILLS</a>
-                    </li>
+                    {navItems.map((item) => (
+                        <li key={item.key}>
+                            <button
+                                type="button"
+                                onClick={() => onNavigate(item.key)}
+                                className={
+                                    "nav-list-item " +
+                                    (activeItem === item.key && "text-white")
+                                }
+                            >
+                                {item.label}
+                            </button>
+                        </li>
+                    ))}
                 </ul>
                 <div className="w-1/3 flex items-center justify-end">
                     <ExternalLinkButton

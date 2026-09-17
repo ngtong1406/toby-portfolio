@@ -5,13 +5,13 @@ import AtIcon from "../assets/icons/at.svg?react";
 import LinkedInIcon from "../assets/icons/linkedin.svg?react";
 import GitHubIcon from "../assets/icons/github.svg?react";
 import InstagramIcon from "../assets/icons/instagram.svg?react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const LandingSection = () => {
     const TOBY_BIRTH_YEAR = 2004;
     const [age, setAge] = useState("");
 
-    useState(() => {
+    useEffect(() => {
         const updateAge = () => {
             const currentYear = new Date().getFullYear();
             setAge(currentYear - TOBY_BIRTH_YEAR);
@@ -21,10 +21,7 @@ const LandingSection = () => {
     }, []);
 
     return (
-        <section
-            id="about"
-            className="w-full section-container grid grid-cols-7 gap-17"
-        >
+        <div id="first" className="w-full grid grid-cols-7 gap-17">
             <div className="col-span-4 flex flex-col justify-between">
                 <div>
                     <h1 className="section-heading">about-me</h1>
@@ -107,7 +104,7 @@ const LandingSection = () => {
                 </div>
             </div>
             <img className="col-span-3" src={landingPhoto} alt="" />
-        </section>
+        </div>
     );
 };
 

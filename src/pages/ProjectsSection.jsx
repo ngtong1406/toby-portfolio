@@ -10,7 +10,7 @@ const ProjectsSection = ({ onSelectProject }) => {
     };
 
     return (
-        <section id="projects" className="section-container">
+        <>
             <div className="w-full inline-flex items-center justify-between">
                 <h1 className="section-heading">my-most-proud-projects</h1>
                 <div className="ml-auto mr-4">More on GitHub:</div>
@@ -24,7 +24,7 @@ const ProjectsSection = ({ onSelectProject }) => {
                 .map(([year, projectList]) => (
                     <div
                         key={year}
-                        className="my-10 flex flex-col opacity-75 hover:opacity-100"
+                        className="my-10 flex flex-col opacity-50 hover:opacity-100"
                     >
                         {projectList.map((project, index) => {
                             const isFirst = index === 0;
@@ -117,7 +117,7 @@ const ProjectsSection = ({ onSelectProject }) => {
                         })}
                     </div>
                 ))}
-        </section>
+        </>
     );
 };
 
