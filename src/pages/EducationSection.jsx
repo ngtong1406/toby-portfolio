@@ -3,7 +3,10 @@ import EducationCard from "../components/EducationCard";
 
 const EducationSection = () => {
     return (
-        <div className="section-container grid grid-cols-7 gap-17">
+        <section
+            id="about"
+            className="section-container grid grid-cols-7 gap-17"
+        >
             <div className="w-full col-span-3">
                 <img
                     className="w-full h-auto object-cover"
@@ -30,7 +33,7 @@ const EducationSection = () => {
                     <EducationCard />
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

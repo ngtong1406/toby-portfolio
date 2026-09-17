@@ -21,7 +21,10 @@ const LandingSection = () => {
     }, []);
 
     return (
-        <div className="w-full section-container grid grid-cols-7 gap-17">
+        <section
+            id="about"
+            className="w-full section-container grid grid-cols-7 gap-17"
+        >
             <div className="col-span-4 flex flex-col justify-between">
                 <div>
                     <h1 className="section-heading">about-me</h1>
@@ -104,7 +107,7 @@ const LandingSection = () => {
                 </div>
             </div>
             <img className="col-span-3" src={landingPhoto} alt="" />
-        </div>
+        </section>
     );
 };
 

@@ -54,7 +54,7 @@
 
 @layer base {
     :root {
-        @apply scheme-dark;
+        @apply scheme-dark scroll-smooth;
     }
 
     ::selection {
@@ -70,7 +70,7 @@
 
 @layer components {
     .section-container {
-        @apply w-full mt-5 mb-30;
+        @apply w-full mt-5 scroll-mt-40 mb-30;
     }
     h1.section-heading::before {
         content: "# ";
@@ -94,13 +94,13 @@
     }
 
     .nav-container {
-        @apply w-full pt-20 pb-10 sticky top-0 backdrop-blur-3xl;
+        @apply w-full py-10 sticky top-0 bg-primary z-50 px-30;
     }
     .nav-list {
         @apply flex items-center justify-around gap-8;
     }
     .nav-list li.nav-list-item {
-        @apply hover:text-white hover:underline hover:underline-offset-4;
+        @apply hover:text-white hover:underline hover:underline-offset-4 transition-colors font-semibold;
     }
     li.nav-list-item > a {
         @apply active:text-white;

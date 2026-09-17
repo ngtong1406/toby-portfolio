@@ -5,8 +5,43 @@ import ExternalLinkButton from "./ExternalLinkButton";
 import resume from "/files/Resume_Toby_Tran_Software_Developer.pdf";
 
 const Navbar = () => {
-    const [time, setTime] = useState("");
+    const initialWidth = window.innerWidth;
+    const [isScrolled, setIsScrolled] = useState(false);
+    useEffect(() => {
+        const onWindowScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
 
+        window.addEventListener("scroll", onWindowScroll);
+
+        return () => {
+            window.removeEventListener("scroll", onWindowScroll);
+        };
+    }, [initialWidth]);
+
+    const [activeItem, setActiveItem] = useState();
+    useEffect(() => {
+        const sections = document.querySelectorAll("section[id]");
+        const options = {
+            root: null,
+            rootMargin: "-50% 0px -50% 0px",
+            threshold: 0,
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveItem(entry.target.id);
+                }
+            });
+        }, options);
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
+
+    const [time, setTime] = useState("");
     useEffect(() => {
         const updateClock = () => {
             const options = {
@@ -32,7 +67,13 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="w-full py-10 sticky top-0 bg-primary z-50">
+        <div
+            className={
+                "nav-container " +
+                (isScrolled &&
+                    "shadow-xl border-b border-b-border-main transition-shadow")
+            }
+        >
             <nav className="w-full inline-flex justify-between align-middle">
                 <div className="w-1/3 space-y-1">
                     <div className="text-white font-bold">
@@ -59,14 +100,32 @@ const Navbar = () => {
                     </div>
                 </div>
                 <ul className="w-1/3 nav-list">
-                    <li className="nav-list-item">
-                        <a href="">ABOUT</a>
+                    <li
+                        className={
+                            "nav-list-item " +
+                            (activeItem === "about" &&
+                                "text-white underline underline-offset-4")
+                        }
+                    >
+                        <a href="#about">ABOUT</a>
                     </li>
-                    <li className="nav-list-item">
-                        <a href="">PROJECTS</a>
+                    <li
+                        className={
+                            "nav-list-item " +
+                            (activeItem === "projects" &&
+                                "text-white underline underline-offset-4")
+                        }
+                    >
+                        <a href="#projects">PROJECTS</a>
                     </li>
-                    <li className="nav-list-item">
-                        <a href="">SKILLS</a>
+                    <li
+                        className={
+                            "nav-list-item " +
+                            (activeItem === "skills" &&
+                                "text-white underline underline-offset-4")
+                        }
+                    >
+                        <a href="#skills">SKILLS</a>
                     </li>
                 </ul>
                 <div className="w-1/3 flex items-center justify-end">
