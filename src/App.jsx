@@ -12,24 +12,25 @@ const App = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     return (
-        <div className="min-h-screen mx-30">
+        <>
             <Navbar />
+            <div className="min-h-screen mx-30">
+                <main>
+                    <LandingSection />
+                    <EducationSection />
+                    <ProjectsSection onSelectProject={setSelectedProject} />
+                    <SkillsSection />
+                    <ContactSection />
+                </main>
 
-            <main>
-                <LandingSection />
-                <EducationSection />
-                <ProjectsSection onSelectProject={setSelectedProject} />
-                <SkillsSection />
-                <ContactSection />
-            </main>
+                <Footer />
 
-            <Footer />
-
-            <ProjectDetailsModal
-                project={selectedProject}
-                onClose={() => setSelectedProject(null)}
-            />
-        </div>
+                <ProjectDetailsModal
+                    project={selectedProject}
+                    onClose={() => setSelectedProject(null)}
+                />
+            </div>
+        </>
     );
 };
 

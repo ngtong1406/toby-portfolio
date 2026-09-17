@@ -10,7 +10,7 @@ const ProjectsSection = ({ onSelectProject }) => {
     };
 
     return (
-        <div className="section-container">
+        <section id="projects" className="section-container">
             <div className="w-full inline-flex items-center justify-between">
                 <h1 className="section-heading">my-most-proud-projects</h1>
                 <div className="ml-auto mr-4">More on GitHub:</div>
@@ -117,7 +117,7 @@ const ProjectsSection = ({ onSelectProject }) => {
                         })}
                     </div>
                 ))}
-        </div>
+        </section>
     );
 };
 
