@@ -35,7 +35,10 @@ const App = () => {
             <Navbar onNavigate={scrollToSection} sectionRefs={sectionRefs} />
             <div className="min-h-screen mx-30">
                 <main>
-                    <section ref={aboutRef} className="section-container">
+                    <section
+                        ref={aboutRef}
+                        className="section-container scroll-mt-38"
+                    >
                         <LandingSection />
                         <EducationSection />
                     </section>
