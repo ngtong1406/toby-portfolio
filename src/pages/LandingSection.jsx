@@ -21,28 +21,22 @@ const LandingSection = () => {
     }, []);
 
     return (
-        <div id="first" className="w-full grid grid-cols-7 gap-17">
-            <div className="col-span-4 flex flex-col justify-between">
+        <div id="first" className="w-full grid grid-cols-1 lg:grid-cols-7 gap-10 xl:gap-17">
+            <div className="col-span-1 lg:col-span-4 flex flex-col justify-between">
                 <div>
                     <h1 className="section-heading">about-me</h1>
                     <hr className="section-break" />
                     <div className="section-text mb-4">
                         <p>
-                            Hey there 👋, my name is Toby Tran. I’m a software
-                            developer recently graduated from{" "}
+                            Hey there 👋, my name is Toby Tran. I’m a software developer recently
+                            graduated from{" "}
                             <span className="section-text-highlight">
                                 the University of South Australia (UniSA)
                             </span>{" "}
                             with{" "}
-                            <span className="section-text-highlight">
-                                a GPA of 6.17 / 7.00
-                            </span>
-                            , majoring in Software Development. Currently based
-                            in{" "}
-                            <span className="section-text-highlight">
-                                Adelaide, SA
-                            </span>
-                            , I am{" "}
+                            <span className="section-text-highlight">a GPA of 6.17 / 7.00</span>,
+                            majoring in Software Development. Currently based in{" "}
+                            <span className="section-text-highlight">Adelaide, SA</span>, I am{" "}
                             <span className="section-text-highlight">
                                 actively looking for opportunities
                             </span>{" "}
@@ -52,20 +46,19 @@ const LandingSection = () => {
                             I take great pride in building solutions that are
                             <span className="section-text-highlight">
                                 {" "}
-                                not only functional but are also underpinned by
-                                clean, robust architecture
+                                not only functional but are also underpinned by clean, robust
+                                architecture
                             </span>
-                            . My serious commitment to applying best practices
-                            through SOLID Principles and System Design ensures
-                            scalability, prevents technical debts, and
-                            contributes to timely, high-quality deliverables.
+                            . My serious commitment to applying best practices through SOLID
+                            Principles and System Design ensures scalability, prevents technical
+                            debts, and contributes to timely, high-quality deliverables.
                         </p>
                     </div>
                     <h1 className="section-heading">social-links</h1>
                     <hr className="section-break" />
                     <div className="section-text mb-4">
-                        Want a collaboration? You can easily find me in the
-                        following links where I'm the most active on:
+                        Want a collaboration? You can easily find me in the following links where
+                        I'm the most active on:
                     </div>
                     <div className="w-full flex flex-wrap gap-3">
                         <ContactLinkSmall
@@ -91,9 +84,7 @@ const LandingSection = () => {
                     </div>
                 </div>
                 <div className="flex flex-col items-end">
-                    <div className="text-2xl">
-                        GRAD. SOFTWARE DEV // {age} YEARS OLD
-                    </div>
+                    <div className="text-2xl">GRAD. SOFTWARE DEV // {age} YEARS OLD</div>
                     <a
                         href="https://www.instagram.com/knchrls/"
                         target="_blank"
@@ -103,7 +94,7 @@ const LandingSection = () => {
                     </a>
                 </div>
             </div>
-            <img className="col-span-3" src={landingPhoto} alt="" />
+            <img className="col-span-1 lg:col-span-3 w-full" src={landingPhoto} alt="" />
         </div>
     );
 };
