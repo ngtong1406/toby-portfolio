@@ -46,6 +46,7 @@ export default function EducationCard() {
                             )}
                             target="_blank"
                             className="edu-card-link"
+                            onClick={(e) => e.stopPropagation()}
                         >
                             Mawson Lakes, SA
                             <ExternalLink className="w-5 h-5 text-secondary" />
@@ -77,6 +78,7 @@ export default function EducationCard() {
                             href={academicTranscript}
                             target="_blank"
                             className="edu-card-link"
+                            onClick={(e) => e.stopPropagation()}
                         >
                             View academic transcript
                             <ExternalLink className="w-5 h-5 text-secondary" />
@@ -104,6 +106,7 @@ export default function EducationCard() {
                             )}
                             target="_blank"
                             className="edu-card-link"
+                            onClick={(e) => e.stopPropagation()}
                         >
                             Marryatville, SA
                             <ExternalLink className="w-5 h-5 text-secondary" />
@@ -197,49 +200,6 @@ export default function EducationCard() {
                     </div>
                 );
             })}
-            {/* <div
-                onClick={onClick}
-                className={
-                    "w-full flex items-center justify-start gap-7 py-6 px-10 bg-border-sub-light border border-border-main hover:border-secondary hover:cursor-pointer select-none duration-100 " +
-                    (expand ? "pb-72 bg-border-subbody" : "")
-                }
-            >
-                <img
-                    className="w-18 h-18 rounded-full object-cover"
-                    src={unisaLogo}
-                    alt=""
-                />
-                <div>
-                    <div className="font-semibold text-white">
-                        University of South Australia (UniSA)
-                    </div>
-                    <div className="text-white">
-                        Bachelor of Information Technology (Software
-                        Development)
-                    </div>
-                    <div>Mar. 2023 &mdash; Nov. 2025</div>
-                </div>
-                <ChevronRight
-                    className={
-                        "ml-auto duration-100 " + (expand ? "rotate-90" : "")
-                    }
-                />
-            </div>
-            <div className="w-full flex items-center justify-start gap-7 py-6 px-10 bg-border-sub-light border border-border-main hover:border-secondary hover:cursor-pointer select-none">
-                <img
-                    className="w-18 h-18 rounded-full object-cover"
-                    src={marryatvilleLogo}
-                    alt=""
-                />
-                <div>
-                    <div className="font-semibold text-white">
-                        Marryatville High School
-                    </div>
-                    <div className="text-white">Y10-12 Full-time Student</div>
-                    <div>2020 &mdash; 2022</div>
-                </div>
-                <ChevronRight className="ml-auto" />
-            </div> */}
         </div>
     );
 }
