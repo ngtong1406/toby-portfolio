@@ -97,7 +97,12 @@
                     "link": "https://www.linkedin.com/in/tobytran/"
                 }
             ],
-            "other": []
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://www.spigotmc.org/resources/towny-title-show-title-when-entering-the-town-area-1-7-1-12.48118/"
+                }
+            ]
         },
         {
             "title": "Better TNT Mechanics",
@@ -112,7 +117,12 @@
                     "link": "https://www.linkedin.com/in/tobytran/"
                 }
             ],
-            "other": []
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://www.spigotmc.org/resources/1-7-1-12-1-better-tnt-mechanics-%C2%BB-added-the-old-mechanisms-of-tnt.46788/"
+                }
+            ]
         },
         {
             "title": "Secret Password",
@@ -127,7 +137,12 @@
                     "link": "https://www.linkedin.com/in/tobytran/"
                 }
             ],
-            "other": []
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://www.spigotmc.org/resources/opensource-1-7-1-12-1-secret-password-security-an-account-has-op.45789/"
+                }
+            ]
         },
         {
             "title": "SimpleDoubleJump",
@@ -142,7 +157,12 @@
                     "link": "https://www.linkedin.com/in/tobytran/"
                 }
             ],
-            "other": []
+            "other": [
+                {
+                    "text": "Live Demo",
+                    "link": "https://www.spigotmc.org/resources/opensource-simple-doublejump.45147/"
+                }
+            ]
         }
     ]
 }

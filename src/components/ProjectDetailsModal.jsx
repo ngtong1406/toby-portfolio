@@ -7,6 +7,7 @@ import GitHubIcon from "../assets/icons/github.svg?react";
 import TechTagSmall from "./TechTagSmall";
 import ContributorTag from "./ContributorTag";
 import ContactLinkSmall from "./ContactLinkSmall";
+import { Link } from "lucide-react";
 
 const ProjectDetailsModal = ({ project, onClose }) => {
     useEffect(() => {
@@ -28,14 +29,14 @@ const ProjectDetailsModal = ({ project, onClose }) => {
     return (
         <AnimatePresence>
             {project && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
+                <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 p-6">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.1 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/20 backdrop-blur-xs"
+                        className="fixed inset-0 bg-black/50 backdrop-blur-xs"
                     />
 
                     <motion.div
@@ -44,7 +45,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                         exit={{ opacity: 0, scale: 0.96, y: 10 }}
                         transition={{ duration: 0.1, ease: "easeOut" }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative z-10 w-full max-w-7xl h-200 bg-primary border border-border-main overflow-hidden"
+                        className="relative z-10 w-full max-w-7xl h-180 bg-primary border border-border-main overflow-hidden shadow-2xl"
                     >
                         <div className="w-full h-full grid grid-cols-5">
                             {project.image && (
@@ -139,10 +140,31 @@ const ProjectDetailsModal = ({ project, onClose }) => {
 
                                 <hr className="section-break shrink-0" />
 
-                                <div></div>
-                                {/* <ContactLinkSmall /> */}
+                                <div className="flex flex-wrap items-center">
+                                    {project.other.length ? (
+                                        project.other.map((link) => (
+                                            <ContactLinkSmall
+                                                SvgIcon={Link}
+                                                label={link.text}
+                                                href={link.link}
+                                            />
+                                        ))
+                                    ) : (
+                                        <div>Demo links unavailable.</div>
+                                    )}
+                                </div>
                             </div>
                         </div>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="z-10 pointer-events-none"
+                    >
+                        Press <b>ESC</b> or click anywhere to close
                     </motion.div>
                 </div>
             )}
