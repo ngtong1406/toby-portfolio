@@ -9,11 +9,11 @@ const EducationSection = () => {
             </div>
             <div className="col-span-4 flex flex-col">
                 <div className="h-1/3 flex flex-col items-start">
-                    <div className="text-lg xl:text-2xl">GRADUATION CEREMONY // FEB. 2026</div>
+                    <div className="text-2xl">GRADUATION CEREMONY // FEB. 2026</div>
                     <a
                         href="https://adelaide.edu.au/"
                         target="_blank"
-                        className="font-serif text-white font-bold text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl hover:underline"
+                        className="font-serif text-white font-bold text-9xl hover:underline"
                     >
                         @UniSA
                     </a>

@@ -84,11 +84,11 @@ const LandingSection = () => {
                     </div>
                 </div>
                 <div className="flex flex-col items-end">
-                    <div className="text-lg xl:text-2xl">GRAD. SOFTWARE DEV // {age} YEARS OLD</div>
+                    <div className="text-2xl">GRAD. SOFTWARE DEV // {age} YEARS OLD</div>
                     <a
                         href="https://www.instagram.com/knchrls/"
                         target="_blank"
-                        className="font-serif text-white font-bold text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl hover:underline"
+                        className="font-serif text-white font-bold text-9xl hover:underline"
                     >
                         @knchrls
                     </a>
