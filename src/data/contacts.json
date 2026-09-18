@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "thesvg-color:gmail-2026",
+        "type": "Gmail",
+        "username": "ngtong1406",
+        "url": "https://mail.google.com/mail/?view=cm&fs=1&to=ngtong1406@gmail.com&su=Inquiry+from+Portfolio"
+    },
+    {
+        "icon": "selfhst:github-light",
+        "type": "GitHub",
+        "username": "ngtong1406",
+        "url": "https://github.com/ngtong1406"
+    },
+    {
+        "icon": "thesvg-color:linkedin",
+        "type": "LinkedIn",
+        "username": "tobytran",
+        "url": "https://www.linkedin.com/in/tobytran/"
+    },
+    {
+        "icon": "thesvg-color:instagram",
+        "type": "Instagram",
+        "username": "knchrls",
+        "url": "https://www.instagram.com/knchrls/"
+    }
+]
