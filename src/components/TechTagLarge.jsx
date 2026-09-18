@@ -2,7 +2,7 @@ import React from "react";
 
 const TechTagLarge = ({ icon = null, text }) => {
     return (
-        <div className="flex items-center gap-2.5 px-3 py-1.5 border border-border-main bg-border-subbody text-white hover:cursor-default hover:-translate-y-1 transition-all">
+        <div className="flex items-center gap-2.5 px-3 py-1.5 border border-border-main bg-border-subbody text-white hover:border-secondary hover:cursor-default hover:-translate-y-1 transition-all">
             {icon && (
                 <img
                     src={`https://api.iconify.design/${icon}.svg`}
