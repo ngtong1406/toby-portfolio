@@ -3,12 +3,6 @@ import contacts from "../data/contacts.json";
 import ContactLinkLarge from "../components/ContactLinkLarge";
 
 const ContactSection = () => {
-    const getGridColsClass = (length) => {
-        if (length % 2 === 0) return "grid-cols-2";
-        if (length % 3 === 0) return "grid-cols-3";
-        return "grid-cols-2";
-    };
-
     return (
         <>
             <h1 className="section-heading">contact-details</h1>
@@ -34,16 +28,13 @@ const ContactSection = () => {
                     </a>
                     — I'm always open to new ideas. 👍
                 </div>
-                <div className="w-full grid grid-cols-5 gap-4 my-10">
-                    <hr className="col-span-2 section-break" />
-                    <div className="col-span-1 text-center">
-                        Otherwise, you can easily find me on...
-                    </div>
-                    <hr className="col-span-2 section-break" />
+                <div className="text-center mt-10 mb-3">
+                    Otherwise, you can easily find me on:
                 </div>
                 <div
                     className={
-                        "w-1/4 grid gap-4 " + getGridColsClass(contacts.length)
+                        "w-1/4 grid gap-4 " +
+                        (contacts.length <= 4 ? "grid-cols-2" : "grid-cols-3")
                     }
                 >
                     {contacts.map((contact) => (
