@@ -1,0 +1,30 @@
+{
+    "Languages": [
+        { "name": "Python", "icon": "material-icon-theme:python" },
+        { "name": "C#", "icon": "devicon:csharp" },
+        { "name": "JavaScript", "icon": "logos:javascript" },
+        { "name": "Java", "icon": "selfhst:java" },
+        { "name": "SQL (MySQL)", "icon": "logos:mysql" }
+    ],
+    "Frameworks & APIs": [
+        {
+            "name": "ASP.NET Core (MVC, WebAPI)",
+            "icon": "thesvg-color:dotnetcore"
+        },
+        { "name": "ReactJS", "icon": "logos:react" },
+        { "name": "FastAPI", "icon": "devicon:fastapi" }
+    ],
+    "Developer Tools": [
+        { "name": "Git/GitHub", "icon": "selfhst:github-light" },
+        { "name": "Docker", "icon": "thesvg-color:docker" },
+        { "name": "VS Code", "icon": "devicon:vscode" },
+        { "name": "Visual Studio", "icon": "devicon:visualstudio" },
+        { "name": "Postman", "icon": "devicon:postman" }
+    ],
+    "Software Design": [
+        { "name": "Clean Architecture", "icon": null },
+        { "name": "SOLID Principles", "icon": null },
+        { "name": "Design Patterns", "icon": null },
+        { "name": "RESTful APIs", "icon": null }
+    ]
+}
