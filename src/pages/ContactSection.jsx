@@ -33,7 +33,7 @@ const ContactSection = () => {
                 </div>
                 <div
                     className={
-                        "w-1/4 grid gap-4 " +
+                        "w-120 grid gap-4 " +
                         (contacts.length <= 4 ? "grid-cols-2" : "grid-cols-3")
                     }
                 >
