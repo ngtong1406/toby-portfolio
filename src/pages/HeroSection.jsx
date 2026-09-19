@@ -15,8 +15,9 @@ import ContactLinkSmall from "../components/ContactLinkSmall";
 import ContactLinkResume from "../components/ContactLinkResume";
 import { MapPin } from "lucide-react";
 
+const TOBY_BIRTH_YEAR = 2004;
+
 const HeroSection = () => {
-    const TOBY_BIRTH_YEAR = 2004;
     const [age, setAge] = useState("");
 
     useEffect(() => {
@@ -39,10 +40,7 @@ const HeroSection = () => {
                 hour12: true,
             };
 
-            const formattedTime = new Date().toLocaleTimeString(
-                "en-US",
-                options,
-            );
+            const formattedTime = new Date().toLocaleTimeString("en-US", options);
             setTime(formattedTime.toLowerCase());
         };
 
@@ -66,9 +64,7 @@ const HeroSection = () => {
                     </div>
 
                     <div className="flex flex-col justify-start h-full">
-                        <div className="text-xl">
-                            WEB PORTFOLIO // TOBY TRAN, {age} YEARS OLD
-                        </div>
+                        <div className="text-xl">WEB PORTFOLIO // TOBY TRAN, {age} YEARS OLD</div>
                         <a
                             href="https://www.instagram.com/knchrls/"
                             target="_blank"
@@ -97,9 +93,7 @@ const HeroSection = () => {
                                     Based in{" "}
                                     <a
                                         className="text-white inline-flex items-center gap-2 hover:underline underline-offset-4"
-                                        href={getMapUrl(
-                                            "Adelaide, South Australia",
-                                        )}
+                                        href={getMapUrl("Adelaide, South Australia")}
                                         target="_blank"
                                     >
                                         <span>Adelaide, South Australia</span>
