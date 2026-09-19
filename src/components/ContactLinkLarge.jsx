@@ -3,7 +3,7 @@ const ContactLinkLarge = ({ icon, type, username, link }) => {
         <a
             href={link}
             target="_blank"
-            className="w-auto max-h-50 overflow-hidden px-1 py-3 text-white bg-border-subbody border border-border-main hover:border-secondary hover:bg-border-sub transition-all duration-100 grid grid-cols-5 items-center gap-2"
+            className="rounded-md w-auto max-h-50 overflow-hidden px-1 py-3 text-white bg-border-subbody border border-border-main hover:border-secondary hover:bg-border-sub hover:-translate-y-1 transition-all duration-100 grid grid-cols-5 items-center gap-2"
         >
             <img
                 src={`https://api.iconify.design/${icon}.svg`}

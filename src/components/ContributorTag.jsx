@@ -4,7 +4,7 @@ const ContributorTag = ({ contributor }) => {
             href={contributor.link ? contributor.link : "#"}
             target="_blank"
             className={
-                "w-full flex items-center justify-start gap-4 bg-border-subbody py-2 px-6 border border-border-sub duration-100 " +
+                "rounded-md w-full flex items-center justify-start gap-4 bg-border-subbody py-2 px-6 border border-border-sub duration-100 " +
                 (contributor.link
                     ? "hover:bg-border-sub-light hover:border-border-main"
                     : "pointer-events-none")

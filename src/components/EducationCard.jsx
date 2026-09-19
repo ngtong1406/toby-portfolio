@@ -108,7 +108,7 @@ export default function EducationCard() {
                     <div
                         key={entry.id}
                         onClick={() => toggleExpand(entry.id)}
-                        className={`w-full py-6 px-10 bg-border-sub-light border  border-border-main duration-100 rounded-none hover:cursor-pointer ${
+                        className={`rounded-md w-full py-6 px-10 bg-border-sub-light border  border-border-main duration-100 hover:cursor-pointer ${
                             isOpen
                                 ? "bg-border-subbody border-secondary"
                                 : "bg-border-sub-light hover:border-secondary"
