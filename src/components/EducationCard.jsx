@@ -1,16 +1,12 @@
-import {
-    MapPin,
-    GraduationCap,
-    Paperclip,
-    ExternalLink,
-    Trophy,
-} from "lucide-react";
+import { MapPin, GraduationCap, Paperclip, ExternalLink, Trophy } from "lucide-react";
 
 import academicTranscript from "/files/Nguyen_Tong_Tran_unisa_transcript.pdf";
 import unisaLogo from "../assets/photos/unisa-logo.png";
 import marryatvilleLogo from "../assets/photos/marryatville-logo.jpg";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
+
+import { getMapUrl } from "../utilities/googleMapLink";
 
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "motion/react";
@@ -22,10 +18,6 @@ export default function EducationCard() {
         setExpandedId((prevId) => (prevId === id ? null : id));
     };
 
-    const getMapUrl = (schoolName, locationName) => {
-        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(schoolName + " " + locationName)}`;
-    };
-
     const educations = [
         {
             id: "unisa",
@@ -35,14 +27,11 @@ export default function EducationCard() {
             period: "Mar. 2023 — Nov. 2025",
             details: [
                 {
-                    icon: (
-                        <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                    ),
+                    icon: <MapPin className="w-5 h-5 text-secondary shrink-0" />,
                     content: (
                         <a
                             href={getMapUrl(
-                                "University of South Australia (UniSA)",
-                                "Mawson Lakes, SA",
+                                "University of South Australia (UniSA) Mawson Lakes, SA",
                             )}
                             target="_blank"
                             className="edu-card-link"
@@ -54,25 +43,15 @@ export default function EducationCard() {
                     ),
                 },
                 {
-                    icon: (
-                        <Trophy className="w-5 h-5 text-secondary shrink-0" />
-                    ),
-                    content: (
-                        <span>
-                            Honours/Awards: 2023-25 University Merit Awards
-                        </span>
-                    ),
+                    icon: <Trophy className="w-5 h-5 text-secondary shrink-0" />,
+                    content: <span>Honours/Awards: 2023-25 University Merit Awards</span>,
                 },
                 {
-                    icon: (
-                        <GraduationCap className="w-5 h-5 text-secondary shrink-0" />
-                    ),
+                    icon: <GraduationCap className="w-5 h-5 text-secondary shrink-0" />,
                     content: <span>GPA: 6.17 / 7.0</span>,
                 },
                 {
-                    icon: (
-                        <Paperclip className="w-5 h-5 text-secondary shrink-0" />
-                    ),
+                    icon: <Paperclip className="w-5 h-5 text-secondary shrink-0" />,
                     content: (
                         <a
                             href={academicTranscript}
@@ -95,15 +74,10 @@ export default function EducationCard() {
             period: "2020 — 2022",
             details: [
                 {
-                    icon: (
-                        <MapPin className="w-5 h-5 text-secondary shrink-0" />
-                    ),
+                    icon: <MapPin className="w-5 h-5 text-secondary shrink-0" />,
                     content: (
                         <a
-                            href={getMapUrl(
-                                "Marryatville High School",
-                                "Marryatville, SA",
-                            )}
+                            href={getMapUrl("Marryatville High School Marryatville, SA")}
                             target="_blank"
                             className="edu-card-link"
                             onClick={(e) => e.stopPropagation()}
@@ -114,15 +88,11 @@ export default function EducationCard() {
                     ),
                 },
                 {
-                    icon: (
-                        <Trophy className="w-5 h-5 text-secondary shrink-0" />
-                    ),
+                    icon: <Trophy className="w-5 h-5 text-secondary shrink-0" />,
                     content: <span>Honours/Awards: 2022 SACE Merit Award</span>,
                 },
                 {
-                    icon: (
-                        <GraduationCap className="w-5 h-5 text-secondary shrink-0" />
-                    ),
+                    icon: <GraduationCap className="w-5 h-5 text-secondary shrink-0" />,
                     content: <span>ATAR: 90.00 / 99.95</span>,
                 },
             ],
@@ -145,9 +115,7 @@ export default function EducationCard() {
                         }`}
                     >
                         <div
-                            className={
-                                "w-full flex items-center justify-start gap-7 select-none "
-                            }
+                            className={"w-full flex items-center justify-start gap-7 select-none "}
                         >
                             <img
                                 className="w-18 h-18 rounded-full object-cover"
@@ -155,17 +123,12 @@ export default function EducationCard() {
                                 alt=""
                             />
                             <div>
-                                <div className="font-semibold text-white">
-                                    {entry.school}
-                                </div>
+                                <div className="font-semibold text-white">{entry.school}</div>
                                 <div className="text-white">{entry.degree}</div>
                                 <div>{entry.period}</div>
                             </div>
                             <ChevronRight
-                                className={
-                                    "ml-auto duration-100 " +
-                                    (isOpen ? "rotate-90" : "")
-                                }
+                                className={"ml-auto duration-100 " + (isOpen ? "rotate-90" : "")}
                             />
                         </div>
 

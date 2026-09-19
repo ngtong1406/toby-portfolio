@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import LandingSection from "./pages/LandingSection.jsx";
-import EducationSection from "./pages/EducationSection.jsx";
 import ProjectsSection from "./pages/ProjectsSection.jsx";
 import SkillsSection from "./pages/SkillsSection.jsx";
 import ContactSection from "./pages/ContactSection.jsx";
@@ -35,12 +34,8 @@ const App = () => {
             <Navbar onNavigate={scrollToSection} sectionRefs={sectionRefs} />
             <div className="min-h-screen mx-30">
                 <main>
-                    <section
-                        ref={aboutRef}
-                        className="section-container scroll-mt-38"
-                    >
+                    <section ref={aboutRef} className="section-container scroll-mt-38">
                         <LandingSection />
-                        <EducationSection />
                     </section>
 
                     <section ref={projectsRef} className="section-container">
