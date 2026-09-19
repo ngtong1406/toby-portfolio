@@ -3,13 +3,18 @@ import resume from "/files/Resume_Toby_Tran_Software_Developer.pdf";
 import GitHubIcon from "../assets/icons/github.svg?react";
 import { ExternalLink } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import { ArrowDown } from "lucide-react";
 
 const Navbar = ({ onNavigate, sectionRefs }) => {
     const initialWidth = window.innerWidth;
-    const [isScrolled, setIsScrolled] = useState(false);
+    const windowHeight = window.innerHeight;
+
+    const [navBarShown, setNavBarShown] = useState(false);
+    const [scrollPromptShown, setScrollPromptShown] = useState(true);
     useEffect(() => {
         const onWindowScroll = () => {
-            setIsScrolled(window.scrollY > 0);
+            setNavBarShown(window.scrollY > (4 / 5) * windowHeight);
+            setScrollPromptShown(window.scrollY < 20);
         };
 
         window.addEventListener("scroll", onWindowScroll);
@@ -17,7 +22,7 @@ const Navbar = ({ onNavigate, sectionRefs }) => {
         return () => {
             window.removeEventListener("scroll", onWindowScroll);
         };
-    }, [initialWidth]);
+    }, [initialWidth, windowHeight]);
 
     const [activeItem, setActiveItem] = useState();
     useEffect(() => {
@@ -56,7 +61,7 @@ const Navbar = ({ onNavigate, sectionRefs }) => {
         <>
             <header className="fixed top-10 left-1/2 -translate-x-1/2 z-50 flex items-center gap-4 pointer-events-auto">
                 <AnimatePresence>
-                    {isScrolled && (
+                    {navBarShown && (
                         <motion.div
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -71,7 +76,9 @@ const Navbar = ({ onNavigate, sectionRefs }) => {
                                             <li key={item.key}>
                                                 <button
                                                     type="button"
-                                                    onClick={() => onNavigate(item.key)}
+                                                    onClick={() =>
+                                                        onNavigate(item.key)
+                                                    }
                                                     className={
                                                         "py-2 px-5 font-semibold hover:text-white hover:cursor-pointer hover:-translate-y-0.5 transition-all " +
                                                         (activeItem === item.key
@@ -109,6 +116,21 @@ const Navbar = ({ onNavigate, sectionRefs }) => {
                     )}
                 </AnimatePresence>
             </header>
+
+            <AnimatePresence>
+                {scrollPromptShown && (
+                    <motion.div
+                        initial={{ opacity: 1, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 15 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none animate-bounce inline-flex items-center gap-2"
+                    >
+                        <span>Scroll for more!</span>
+                        <ArrowDown className="w-5 h-5" />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 };

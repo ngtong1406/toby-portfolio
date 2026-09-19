@@ -8,6 +8,7 @@ import { useState } from "react";
 import ProjectDetailsModal from "./components/ProjectDetailsModal.jsx";
 // import ScrollUp from "./pages/ScrollUp.jsx";
 import { useRef } from "react";
+import HeroSection from "./pages/HeroSection.jsx";
 
 const App = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -34,15 +35,26 @@ const App = () => {
             <Navbar onNavigate={scrollToSection} sectionRefs={sectionRefs} />
             <div className="min-h-screen mx-30">
                 <main>
-                    <section ref={aboutRef} className="section-container scroll-mt-38">
+                    <HeroSection />
+
+                    <section
+                        ref={aboutRef}
+                        className="section-container scroll-mt-38"
+                    >
                         <LandingSection />
                     </section>
 
-                    <section ref={projectsRef} className="section-container">
+                    <section
+                        ref={projectsRef}
+                        className="section-container scroll-mt-30"
+                    >
                         <ProjectsSection onSelectProject={setSelectedProject} />
                     </section>
 
-                    <section ref={skillsRef} className="section-container">
+                    <section
+                        ref={skillsRef}
+                        className="section-container scroll-mt-30"
+                    >
                         <SkillsSection />
                     </section>
 
