@@ -5,13 +5,15 @@ import ContactLinkSmall from "../components/ContactLinkSmall";
 import AtIcon from "../assets/icons/at.svg?react";
 import LinkedInIcon from "../assets/icons/linkedin.svg?react";
 import GitHubIcon from "../assets/icons/github.svg?react";
-import InstagramIcon from "../assets/icons/instagram.svg?react";
 import { useState, useEffect } from "react";
 import { ExternalLink, MapPin } from "lucide-react";
 
 import { getMapUrl } from "../utilities/googleMapLink";
 import StatusBadgeSmall from "../components/StatusBadgeSmall";
 import EducationCard from "../components/EducationCard";
+
+import resume from "/files/Resume_Toby_Tran_Software_Developer.pdf";
+import ContactLinkResume from "../components/ContactLinkResume";
 
 const LandingSection = () => {
     const TOBY_BIRTH_YEAR = 2004;
@@ -91,6 +93,7 @@ const LandingSection = () => {
                                     <a
                                         className="text-white inline-flex items-center gap-2 hover:underline underline-offset-4"
                                         href={getMapUrl("Adelaide, South Australia")}
+                                        target="_blank"
                                     >
                                         <span>Adelaide, South Australia</span>
                                         <ExternalLink className="w-5 h-5" />
@@ -119,11 +122,7 @@ const LandingSection = () => {
                             label="GitHub"
                             href="https://github.com/ngtong1406"
                         />
-                        <ContactLinkSmall
-                            SvgIcon={InstagramIcon}
-                            label="Instagram"
-                            href="https://www.instagram.com/knchrls/"
-                        />
+                        <ContactLinkResume label="View resume" href={resume} />
                     </div>
                 </div>
 
