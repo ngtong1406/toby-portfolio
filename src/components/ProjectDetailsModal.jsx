@@ -72,7 +72,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                                         <span className="text-date-gray"> — {project.period}</span>
                                     </div>
                                     {project.other.length > 0 &&
-                                        project.other[0].text === "Live Demo" && (
+                                        project.other[0].text === "Source code" && (
                                             <a
                                                 href={project.other[0].link}
                                                 target="_blank"
