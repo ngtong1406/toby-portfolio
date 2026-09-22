@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: "JetBrains Mono";
-    src: url("/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+    src: url("/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf")
+        format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -10,7 +11,8 @@
 
 @font-face {
     font-family: "Playfair Display";
-    src: url("/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+    src: url("/fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
+        format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -18,7 +20,8 @@
 
 @font-face {
     font-family: "Google Sans";
-    src: url("/fonts/Google_Sans/GoogleSans-VariableFont.ttf") format("truetype");
+    src: url("/fonts/Google_Sans/GoogleSans-VariableFont.ttf")
+        format("truetype");
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -33,7 +36,7 @@
     --font-serif: "Playfair Display", serif;
     --font-playfair: "Playfair Display", serif;
 
-    /* for sans-srif */
+    /* for sans-serif */
     --font-sans: "Google Sans", sans-serif;
     --font-google: "Google Sans", sans-serif;
 
@@ -69,9 +72,48 @@
     }
 
     body {
-        @apply bg-primary text-secondary text-[1rem] font-sans overflow-x-hidden;
+        @apply bg-primary text-secondary text-[1rem] font-sans overflow-x-hidden relative;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+    }
+
+    #root {
+        @apply relative z-10;
+    }
+
+    /* technical grid */
+    body::before {
+        content: "";
+        @apply fixed inset-0 pointer-events-none z-0;
+        background-image:
+            linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.03) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.03) 1px,
+                transparent 1px
+            );
+        background-size: 36px 36px;
+        mask-image: radial-gradient(
+            ellipse 80% 60% at 50% 30%,
+            black 40%,
+            transparent 100%
+        );
+        -webkit-mask-image: radial-gradient(
+            ellipse 80% 60% at 50% 30%,
+            black 40%,
+            transparent 100%
+        );
+    }
+
+    /* film grain layer */
+    body::after {
+        content: "";
+        @apply fixed inset-0 pointer-events-none z-50 opacity-[0.03] mix-blend-screen;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 }
 
