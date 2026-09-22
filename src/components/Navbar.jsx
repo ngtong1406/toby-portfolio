@@ -122,9 +122,9 @@ const Navbar = ({ onNavigate, sectionRefs }) => {
                     <motion.div
                         initial={{ opacity: 1, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 15 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none animate-bounce inline-flex items-center gap-2"
+                        exit={{ opacity: 0, y: -15 }}
+                        transition={{ duration: 0.1 }}
+                        className="fixed bottom-10 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none animate-bounce inline-flex items-center gap-2"
                     >
                         <span>Scroll for more!</span>
                         <ArrowDown className="w-5 h-5" />
