@@ -43,7 +43,7 @@ const ProjectImageCarousel = ({ images = [], title = "" }) => {
                 {images.map((src, idx) => (
                     <div
                         key={idx}
-                        className="w-full h-full shrink-0 relative bg-primary"
+                        className="w-full h-full shrink-0 relative bg-black"
                     >
                         <img
                             src={src}
