@@ -8,6 +8,7 @@ import TechTagSmall from "./TechTagSmall";
 import ContributorTag from "./ContributorTag";
 import ContactLinkSmall from "./ContactLinkSmall";
 import { Link } from "lucide-react";
+import ProjectImageCarousel from "./ProjectImageCarousel";
 
 const ProjectDetailsModal = ({ project, onClose }) => {
     useEffect(() => {
@@ -25,6 +26,8 @@ const ProjectDetailsModal = ({ project, onClose }) => {
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [project, onClose]);
+
+    const hasImages = project?.images && project.images.length > 0;
 
     return (
         <AnimatePresence>
@@ -48,19 +51,23 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                         className="rounded-md relative z-10 w-full max-w-7xl h-180 bg-primary border border-border-main overflow-hidden shadow-2xl"
                     >
                         <div className="w-full h-full grid grid-cols-5">
-                            {project.image && (
+                            {project.images && (
                                 <div className="relative col-span-2 h-full overflow-hidden border-r border-border-main">
-                                    <img
+                                    {/* <img
                                         src={project.image}
                                         alt=""
                                         className="absolute inset-0 w-full h-full object-cover"
+                                    /> */}
+                                    <ProjectImageCarousel
+                                        images={project.images}
+                                        title={project.title}
                                     />
                                 </div>
                             )}
 
                             <div
                                 className={
-                                    (project.image ? "col-span-3" : "col-span-5") +
+                                    (hasImages ? "col-span-3" : "col-span-5") +
                                     " h-full flex flex-col min-h-0 p-7"
                                 }
                             >
@@ -69,10 +76,14 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                                         <span className="text-white font-semibold">
                                             {project.title}
                                         </span>
-                                        <span className="text-date-gray"> — {project.period}</span>
+                                        <span className="text-date-gray">
+                                            {" "}
+                                            — {project.period}
+                                        </span>
                                     </div>
                                     {project.other.length > 0 &&
-                                        project.other[0].text === "Source code" && (
+                                        project.other[0].text ===
+                                            "Source code" && (
                                             <a
                                                 href={project.other[0].link}
                                                 target="_blank"
@@ -86,29 +97,49 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                                 <hr className="section-break shrink-0" />
 
                                 <div className="h-4/5 overflow-y-auto overscroll-contain">
-                                    <p className="text-white mb-2">The Problem:</p>
-                                    <p className="mb-4">{project.the_problem}</p>
-                                    <p className="text-white mb-2">Project Highlights:</p>
-                                    <p className="mb-4">{project.project_highlights}</p>
-                                    <p className="text-white mb-2">Tech stack:</p>
+                                    <p className="text-white mb-2">
+                                        The Problem:
+                                    </p>
+                                    <p className="mb-4">
+                                        {project.the_problem}
+                                    </p>
+                                    <p className="text-white mb-2">
+                                        Project Highlights:
+                                    </p>
+                                    <p className="mb-4">
+                                        {project.project_highlights}
+                                    </p>
+                                    <p className="text-white mb-2">
+                                        Tech stack:
+                                    </p>
                                     <ul className="inline-flex flex-wrap items-center gap-2 mb-4">
                                         {project.tech_stack.map((entry) => {
                                             return (
                                                 <li>
-                                                    <TechTagSmall text={entry} />
+                                                    <TechTagSmall
+                                                        text={entry}
+                                                    />
                                                 </li>
                                             );
                                         })}
                                     </ul>
-                                    <p className="text-white mb-2">Contributor(s):</p>
+                                    <p className="text-white mb-2">
+                                        Contributor(s):
+                                    </p>
                                     <ul className="flex flex-wrap items-center gap-3 mb-4">
-                                        {project.contributors.map((contributor) => {
-                                            return (
-                                                <li className="col-span-1">
-                                                    <ContributorTag contributor={contributor} />
-                                                </li>
-                                            );
-                                        })}
+                                        {project.contributors.map(
+                                            (contributor) => {
+                                                return (
+                                                    <li className="col-span-1">
+                                                        <ContributorTag
+                                                            contributor={
+                                                                contributor
+                                                            }
+                                                        />
+                                                    </li>
+                                                );
+                                            },
+                                        )}
                                     </ul>
                                 </div>
 

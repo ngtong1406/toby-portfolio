@@ -2,11 +2,21 @@
     "2025": [
         {
             "title": "Mission Planner",
-            "image": "https://images.interestingengineering.com/2023/04/16/image/jpeg/tCht79YHms48BYKzclvMO0uZsqWSd1WP6XKsq9RP.jpg",
+            "images": [
+                "https://images.interestingengineering.com/2023/04/16/image/jpeg/tCht79YHms48BYKzclvMO0uZsqWSd1WP6XKsq9RP.jpg",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5NyWOYekjMJpwuay7ltRJLiK1J5NiBx_u7e_TvBxn19Q-DGdcyhpHbnp2&s=10"
+            ],
             "period": "Nov. 2025",
             "the_problem": "In this capstone project, our group of three was tasked with developing an internal mission-planning tool to help our client, Paladin Space, optimise their debris removal operations. Their core mission is to leverage their engineering expertise to create robots that can remove orbital debris around Earth, protecting satellite clients from the high risks of in-orbit collisions where avoidance maneuvers involve significant operational costs. Because every single movement of the robots incurs a massive cost, the client was seeking a technical solution to optimise this mission. Therefore, we were tasked with developing a tool that provides optimal, client-specific movement paths based on real-time predictive data.",
             "project_highlights": "The original version of the tool lacked an intuitive user interface to display critical statistics and visualise the negative impacts of orbital debris, alongside having limited extensibility. As the app needed to run locally on the client's computers, our team leveraged the rich ecosystem of web technologies, the rapid prototyping capabilities of FastAPI (Python), and PyWebView to run natively while optimising the codebase to ensure smooth performance. A predictive algorithmic model was implemented to cluster relevant orbital debris into groups and assign them priority levels based on their impact. The client can choose a satellite company they want to plan for, and the app will fetch and process real-time data, tailor results to specific business contexts, and present key metrics through interactive 3D visualisations.",
-            "tech_stack": ["FastAPI", "PyWebView", "ReactJS", "TailwindCSS", "CesiumJS", "DBScan"],
+            "tech_stack": [
+                "FastAPI",
+                "PyWebView",
+                "ReactJS",
+                "TailwindCSS",
+                "CesiumJS",
+                "DBScan"
+            ],
             "contributors": [
                 {
                     "name": "Brayden Hutchens",
@@ -35,11 +45,18 @@
     "2024": [
         {
             "title": "SA Expiation Dashboard",
-            "image": "https://www.police.sa.gov.au/__data/assets/image/0005/1349807/MPDC-mobile-offence-passenger-steering.jpg",
+            "images": [
+                "https://www.police.sa.gov.au/__data/assets/image/0005/1349807/MPDC-mobile-offence-passenger-steering.jpg"
+            ],
             "period": "Nov. 2024",
             "the_problem": "Identifying optimal locations to deploy Mobile Phone Detection Cameras (MPDCs) is crucial for improving road safety across South Australia, yet making effective decisions based on massive, raw expiation datasets is challenging. The available data lacked an accessible way to examine violation patterns across different regions and timeframes, making it difficult for stakeholders to evaluate where road safety risks are highest. Because deploying enforcement infrastructure involves considerable public resources and operational planning, a dedicated analytical tool was needed to transform complex expiation records into clear, evidence-based insights.",
             "project_highlights": "To solve this, I developed a data-driven web application designed to process and analyse South Australian expiation datasets. The backend was built with ASP.NET Core Web API to handle data filtering and aggregation efficiently, while ReactJS and Bootstrap provide a consistent, responsive interface. I integrated custom D3.js visualisations to translate raw compliance records into interactive charts and distribution views. Users can apply multi-level filters by offence types, locations, and time periods to spot critical trends, assisting decision-makers in allocating road safety resources and planning camera deployments effectively.",
-            "tech_stack": ["ASP.NET Core Web API", "ReactJS", "Bootstrap", "D3.js"],
+            "tech_stack": [
+                "ASP.NET Core Web API",
+                "ReactJS",
+                "Bootstrap",
+                "D3.js"
+            ],
             "contributors": [
                 {
                     "name": "Toby Tran (me)",
@@ -56,7 +73,9 @@
         },
         {
             "title": "Big Thing Finder (iOS)",
-            "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Big_Things_Postcard.jpg/500px-Big_Things_Postcard.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+            "images": [
+                "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Big_Things_Postcard.jpg/500px-Big_Things_Postcard.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+            ],
             "period": "Nov. 2024",
             "the_problem": "Australia is well known for its iconic roadside \"Big Things\" scattered across thousands of kilometres of regional highways, making them a popular attraction for road-trippers and enthusiasts. However, locating and visiting these giant landmarks is often inconvenient because information is scattered across outdated websites, leaving travellers without a simple way to discover nearby sites, check ratings, or keep track of where they have already been. Since regional road trips frequently involve patchy mobile coverage, a dedicated, mobile-friendly tool was needed to help fans easily explore, evaluate, and log their roadside adventures on the go.",
             "project_highlights": "To address this, I built a native iOS application using SwiftUI, designed specifically for Australian Big Thing fans and travellers. The app incorporates local persistent storage to ensure users can access landmark details and maintain their travel records reliably, even when travelling through remote regional areas with limited connectivity. Users can effortlessly identify Big Things across their current region, view and submit community ratings, and track their visited milestones through a clean, intuitive, and responsive mobile interface.",
