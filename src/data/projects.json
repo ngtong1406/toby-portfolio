@@ -4,7 +4,7 @@
             "title": "Mission Planner",
             "images": [
                 "https://images.interestingengineering.com/2023/04/16/image/jpeg/tCht79YHms48BYKzclvMO0uZsqWSd1WP6XKsq9RP.jpg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5NyWOYekjMJpwuay7ltRJLiK1J5NiBx_u7e_TvBxn19Q-DGdcyhpHbnp2&s=10"
+                "/photos/STEM_Event-131.jpg"
             ],
             "period": "Nov. 2025",
             "the_problem": "In this capstone project, our group of three was tasked with developing an internal mission-planning tool to help our client, Paladin Space, optimise their debris removal operations. Their core mission is to leverage their engineering expertise to create robots that can remove orbital debris around Earth, protecting satellite clients from the high risks of in-orbit collisions where avoidance maneuvers involve significant operational costs. Because every single movement of the robots incurs a massive cost, the client was seeking a technical solution to optimise this mission. Therefore, we were tasked with developing a tool that provides optimal, client-specific movement paths based on real-time predictive data.",
@@ -98,6 +98,10 @@
     "2017": [
         {
             "title": "Towny Title",
+            "images": [
+                "https://proxy.spigotmc.org/d648dc6a0fb565ea2fa86d2001f848f2f84e33d6/68747470733a2f2f692e696d6775722e636f6d2f304e46424262572e706e67",
+                "https://user-images.githubusercontent.com/879756/65964696-19d6b300-e423-11e9-9cb0-d193225ee40f.png"
+            ],
             "period": "Oct. 2017",
             "the_problem": "On multiplayer servers running the 'Towny' territory management plugin, players often found it difficult to navigate town borders without relying on cluttered text commands. Navigating between wild wilderness and claimed territories lacked immediate visual feedback, causing accidental trespassing and poor situational awareness during group combat.",
             "project_highlights": "Built a Java add-on plugin using the Spigot API that tracks player positions in real time as they traverse world borders. The plugin renders on-screen titles, territory names, and instant entry warnings directly onto the player's viewport to assist players in navigation. Adopted by 1,243 server administrators, helping improve navigation and server usability across thousands of multiplayer communities.",
@@ -111,13 +115,18 @@
             ],
             "other": [
                 {
-                    "text": "Live Demo",
+                    "text": "Live demo",
                     "link": "https://www.spigotmc.org/resources/towny-title-show-title-when-entering-the-town-area-1-7-1-12.48118/"
                 }
             ]
         },
         {
             "title": "Better TNT Mechanics",
+            "images": [
+                "https://proxy.spigotmc.org/5412625a79914eba0078ca1cc906dbd94d3da33a/687474703a2f2f692e696d6775722e636f6d2f516263733248482e706e67",
+                "https://proxy.spigotmc.org/ca8d69d1f647801f32f636d054bb0def9743a76c/687474703a2f2f692e696d6775722e636f6d2f3938555645355a2e706e67",
+                "https://proxy.spigotmc.org/147376a173091913258e2bc0fb7dbeeda7650ff9/687474703a2f2f692e696d6775722e636f6d2f6445635675785a2e706e67"
+            ],
             "period": "Sep. 2017",
             "the_problem": "Modern game updates altered legacy TNT explosion physics and mechanics, frustrating server administrators and players running PvP or faction servers who preferred the fast-paced, predictable raiding dynamics of older versions.",
             "project_highlights": "Developed a lightweight Spigot/Java plugin that accurately restores legacy TNT explosion mechanics while introducing customisable sudden-explosion mechanics for server owners. The plugin was adopted by 815 server administrators, revitalising raiding and combat gameplay across hundreds of active servers.",
@@ -131,7 +140,7 @@
             ],
             "other": [
                 {
-                    "text": "Live Demo",
+                    "text": "Live demo",
                     "link": "https://www.spigotmc.org/resources/1-7-1-12-1-better-tnt-mechanics-%C2%BB-added-the-old-mechanisms-of-tnt.46788/"
                 }
             ]
@@ -151,13 +160,17 @@
             ],
             "other": [
                 {
-                    "text": "Live Demo",
+                    "text": "Live demo",
                     "link": "https://www.spigotmc.org/resources/opensource-1-7-1-12-1-secret-password-security-an-account-has-op.45789/"
                 }
             ]
         },
         {
             "title": "SimpleDoubleJump",
+            "images": [
+                "https://proxy.spigotmc.org/d8e50b53e5ab4c437322aa1811b03655960a5f89/687474703a2f2f692e696d6775722e636f6d2f39614d31706f492e706e67",
+                "https://proxy.spigotmc.org/22e0c4e587f93d2bee18f9ebc9115ea1c4733c0d/687474703a2f2f692e696d6775722e636f6d2f696869304464432e706e67"
+            ],
             "period": "Aug. 2017",
             "the_problem": "Default in-game movement mechanics are relatively rigid and slow, making server lobbies, mini-games, and custom parkour courses feel static without requiring players to install dedicated client-side modifications.",
             "project_highlights": "Built an open-source Spigot plugin in Java that introduces responsive double-jump physics to the base game without requiring any client-side mod installations. Integrated an automated version-checking mechanism to keep the plugin maintained seamlessly across game updates. The plugin was adopted by 328 server administrators to enhance movement dynamics on their servers.",
@@ -171,7 +184,11 @@
             ],
             "other": [
                 {
-                    "text": "Live Demo",
+                    "text": "Source code",
+                    "link": "https://github.com/TrieuCoding/SimpleDoubleJump"
+                },
+                {
+                    "text": "Live demo",
                     "link": "https://www.spigotmc.org/resources/opensource-simple-doublejump.45147/"
                 }
             ]
