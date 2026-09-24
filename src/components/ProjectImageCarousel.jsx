@@ -57,7 +57,7 @@ const ProjectImageCarousel = ({ images = [], title = "" }) => {
             {images.length > 1 && (
                 <>
                     {/* img number badge*/}
-                    <div className="absolute top-4 right-4 px-2 py-0.5 rounded-md bg-primary/80 backdrop-blur-md border border-border-main text-xs font-mono text-secondary pointer-events-none">
+                    <div className="absolute top-4 right-4 px-2 py-0.5 rounded-md bg-primary/80 backdrop-blur-md border border-border-main text-secondary pointer-events-none">
                         {currentIndex + 1}/{images.length}
                     </div>
 
