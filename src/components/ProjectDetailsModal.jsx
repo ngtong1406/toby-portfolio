@@ -28,6 +28,9 @@ const ProjectDetailsModal = ({ project, onClose }) => {
     }, [project, onClose]);
 
     const hasImages = project?.images && project.images.length > 0;
+    const sourceCodeIdx = project?.other.findIndex(
+        (source) => source.text === "Source code",
+    );
 
     return (
         <AnimatePresence>
@@ -53,11 +56,6 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                         <div className="w-full h-full grid grid-cols-5">
                             {project.images && (
                                 <div className="relative col-span-2 h-full overflow-hidden border-r border-border-main">
-                                    {/* <img
-                                        src={project.image}
-                                        alt=""
-                                        className="absolute inset-0 w-full h-full object-cover"
-                                    /> */}
                                     <ProjectImageCarousel
                                         images={project.images}
                                         title={project.title}
@@ -82,10 +80,12 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                                         </span>
                                     </div>
                                     {project.other.length > 0 &&
-                                        project.other[0].text ===
-                                            "Source code" && (
+                                        sourceCodeIdx != -1 && (
                                             <a
-                                                href={project.other[0].link}
+                                                href={
+                                                    project.other[sourceCodeIdx]
+                                                        .link
+                                                }
                                                 target="_blank"
                                                 className=""
                                             >
@@ -145,7 +145,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
 
                                 <hr className="section-break shrink-0" />
 
-                                <div className="flex flex-wrap items-center">
+                                <div className="flex flex-wrap items-center gap-2">
                                     {project.other.length ? (
                                         project.other.map((link) => (
                                             <ContactLinkSmall
